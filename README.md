@@ -13,3 +13,4 @@ Charge to reveal your content
 ## Roadmap
 - Add text content reveal
 - Add more wallet integrations
+- Add loading status to button
