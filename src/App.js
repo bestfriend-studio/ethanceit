@@ -21,14 +21,14 @@ function App() {
       <Flex
         flexDirection={["column", "row"]}
         alignItems="center"
-        flexWrap="wrap"
+        flexWrap={["wrap", "wrap", "nowrap"]}
         width={1}
         mb={[4, 2]}
       >
         <Box
           border={1}
           borderColor="black"
-          width={[1, "auto"]}
+          width={[1, 1, 1 / 2]}
           borderWidth={3}
           mr={[0, 4]}
           ml={[0, 4]}
@@ -110,12 +110,7 @@ function App() {
             </Text>
           </Card>
         </Box>
-        <Box
-          padding={[0, "100px"]}
-          mt={[4, 0]}
-          width={[1, 1, 1 / 3]}
-          mb={[4, 0]}
-        >
+        <Box padding={[0, 4]} mt={[4, 0]} width={[1, 1, 1 / 2]} mb={[4, 0]}>
           <Ethanceit
             address="0x9Faf8f3EE20B71c5b4Da30F69D1aFbfaF4196382"
             src="https://source.unsplash.com/random/1280x720"

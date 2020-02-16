@@ -10,7 +10,8 @@ const pinkTheme = {
   colors: {
     ...theme.colors,
     primary: "#F82495"
-  }
+  },
+  breakpoints: ["40em", "64em", "80em"]
 };
 
 ReactDOM.render(
