@@ -5,7 +5,7 @@ import Ethanceit from "./components/Ethanceit";
 
 function App() {
   return (
-    <Box className="App">
+    <Box p="2">
       <Heading
         textAlign="left"
         ml={4}
@@ -23,14 +23,17 @@ function App() {
         alignItems="center"
         flexWrap="wrap"
         width={1}
+        mb={[4, 2]}
       >
         <Box
           border={1}
           borderColor="black"
           width={[1, "auto"]}
           borderWidth={3}
-          mr={4}
-          ml={4}
+          mr={[0, 4]}
+          ml={[0, 4]}
+          mt={[6, 0]}
+          order={[1, 0]}
           boxShadow="inset 0px -8px 0px rgba(236, 246, 161, 1)"
         >
           <Heading textAlign="left" m={4} as={"h2"}>
@@ -58,6 +61,7 @@ function App() {
             mx={4}
             mt={2}
             mb={4}
+            overflow={["hidden", "visible"]}
           >
             <Text
               lineHeight={1}
@@ -82,6 +86,7 @@ function App() {
               fontFamily="monospace"
               color="#ECF6A1"
               pl={3}
+              maxWidth={"100%"}
             >
               {`  src="https://source.unsplash.com/random/1280x720" // image source`}
             </Text>
@@ -105,7 +110,7 @@ function App() {
             </Text>
           </Card>
         </Box>
-        <Box padding={[4, "100px"]} width={[1, 1 / 3]}>
+        <Box padding={[0, "100px"]} mt={[4, 0]} width={[1, 1 / 3]} mb={[4, 0]}>
           <Ethanceit
             address="0x9Faf8f3EE20B71c5b4Da30F69D1aFbfaF4196382"
             src="https://source.unsplash.com/random/1280x720"
