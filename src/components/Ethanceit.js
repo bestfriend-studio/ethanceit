@@ -40,24 +40,23 @@ function Ethanceit({ address, tipAmount, src }) {
   };
 
   return (
-    <Box>
+    <Box position={"relative"}>
       <BlurImage
         alt="random unsplash image"
-        borderRadius={8}
         height="auto"
         blur={blur}
         src={src}
       />
-      <Box>
+      <Box position="absolute" bottom="0" right="0">
         {ethanced === 0 && (
-          <Button.Outline onClick={submitTip}>
+          <Button onClick={submitTip} borderRadius={0}>
             Enhance it for $.01
-          </Button.Outline>
+          </Button>
         )}
         {ethanced === 1 && (
-          <Button.Outline onClick={submitTip}>
+          <Button onClick={submitTip} borderRadius={0}>
             Fully enhance it for another $.01
-          </Button.Outline>
+          </Button>
         )}
       </Box>
     </Box>
