@@ -14,3 +14,5 @@ Charge to reveal your content
 - Add text content reveal
 - Add more wallet integrations
 - Add loading status to button
+- Add layer2 / sidechain for faster tips
+- Integrate zero knowledge for anonymous tips
