@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/ethanceit/static/css/main.d1b05096.chunk.css",
-    "main.js": "/ethanceit/static/js/main.3b762bfc.chunk.js",
-    "main.js.map": "/ethanceit/static/js/main.3b762bfc.chunk.js.map",
-    "runtime-main.js": "/ethanceit/static/js/runtime-main.b94aff59.js",
-    "runtime-main.js.map": "/ethanceit/static/js/runtime-main.b94aff59.js.map",
-    "static/js/2.fd52ff4c.chunk.js": "/ethanceit/static/js/2.fd52ff4c.chunk.js",
-    "static/js/2.fd52ff4c.chunk.js.map": "/ethanceit/static/js/2.fd52ff4c.chunk.js.map",
+    "main.js": "/ethanceit/static/js/main.d800b100.chunk.js",
+    "main.js.map": "/ethanceit/static/js/main.d800b100.chunk.js.map",
+    "runtime-main.js": "/ethanceit/static/js/runtime-main.b6b398e6.js",
+    "runtime-main.js.map": "/ethanceit/static/js/runtime-main.b6b398e6.js.map",
+    "static/js/2.3a97d8d7.chunk.js": "/ethanceit/static/js/2.3a97d8d7.chunk.js",
+    "static/js/2.3a97d8d7.chunk.js.map": "/ethanceit/static/js/2.3a97d8d7.chunk.js.map",
     "index.html": "/ethanceit/index.html",
-    "precache-manifest.1262e28d586160f8dbf8cb688f0fa8e3.js": "/ethanceit/precache-manifest.1262e28d586160f8dbf8cb688f0fa8e3.js",
+    "precache-manifest.5ac3cf66040d3b09a0006ea20842417a.js": "/ethanceit/precache-manifest.5ac3cf66040d3b09a0006ea20842417a.js",
     "service-worker.js": "/ethanceit/service-worker.js",
     "static/css/main.d1b05096.chunk.css.map": "/ethanceit/static/css/main.d1b05096.chunk.css.map",
-    "static/js/2.fd52ff4c.chunk.js.LICENSE.txt": "/ethanceit/static/js/2.fd52ff4c.chunk.js.LICENSE.txt"
+    "static/js/2.3a97d8d7.chunk.js.LICENSE.txt": "/ethanceit/static/js/2.3a97d8d7.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.b94aff59.js",
-    "static/js/2.fd52ff4c.chunk.js",
+    "static/js/runtime-main.b6b398e6.js",
+    "static/js/2.3a97d8d7.chunk.js",
     "static/css/main.d1b05096.chunk.css",
-    "static/js/main.3b762bfc.chunk.js"
+    "static/js/main.d800b100.chunk.js"
   ]
 }
