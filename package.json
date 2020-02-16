@@ -38,7 +38,7 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "http://ethance.it/",
+  "homepage": "https://ethance.it/",
   "devDependencies": {
     "gh-pages": "^2.2.0"
   }

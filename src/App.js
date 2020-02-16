@@ -50,7 +50,7 @@ function App() {
               fontFamily="monospace"
               color="#FAE2EA"
             >
-              npm install ethanceit
+              npm i @bit/mikelockz.onedairection.ethanceit
             </Text>
           </Card>
           <Card
