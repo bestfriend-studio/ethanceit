@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Flex, Button, Slider, Image, Box, Text, Heading } from "rimble-ui";
+import { Flex, Button, Card, Image, Box, Text, Heading } from "rimble-ui";
 import styled from "styled-components";
 import "./App.css";
 import Web3 from "web3";
@@ -42,44 +42,62 @@ function App() {
 
   return (
     <Box className="App">
-      <Heading color={"primary"}>ethance.it</Heading>
+      <Heading textAlign="left" ml={4} mr={3} as={"h1"} fontSize={7} fontWeight={4} color={"black"} my={4}>ethance.it</Heading>
+      <Flex flexDirection="row" alignItems="center">
+      <Box
+              border={1}
+              borderColor="black"
+              width="auto"
+              borderWidth={3}
+              mr={4}
+              ml={4}
+              boxShadow="inset 0px -8px 0px rgba(236, 246, 161, 1)"
+            >
+                <Heading textAlign="left" m={4} as={"h2"}>Charge to reveal your content</Heading>
+                <Text m={4} textAlign="left">Install the package to add this component to your site. Then you can charge users to reveal your content.</Text>
+                <Card borderRadius={2} bg="#041414" py={3} pl={3} mx={4} mt={4}>
+                <Text lineHeight={1} textAlign="left" fontFamily="monospace" color="#FAE2EA">
+                  npm install ethanceit
+                </Text>
+                </Card>
+                <Card borderRadius={2} bg="#041414" py={3} pl={3} mx={4} mt={2} mb={4}>
+                  <Text lineHeight={1} textAlign="left" fontFamily="monospace" color="#ECF6A1">
+                    {`  <Ethanceit`}
+                  </Text>
+                  <Text lineHeight={1} textAlign="left" fontFamily="monospace" color="#ECF6A1">
+                    {`  address="0x0000..." // address to receive the tip`}
+                  </Text>
+                  <Text lineHeight={1} textAlign="left" fontFamily="monospace" color="#ECF6A1">
+                    {`  src="https://source.unsplash.com/random/1280x720" // image source`}
+                  </Text>
+                  <Text lineHeight={1} textAlign="left" fontFamily="monospace" color="#ECF6A1">
+                    {`  tipAmount="100000000000000" // Gwei \n /> `}
+                  </Text>
+              </Card>
+                <Box mb={4}>
+                  {ethanced === 0 && (
+                    <Button borderRadius={0} onClick={submitTip}>
+                      Enhance it for $.01
+                    </Button>
+                  )}
+                  {ethanced === 1 && (
+                    <Button borderRadius={0}  onClick={submitTip}>
+                      Fully enhance it for another $.01
+                    </Button>
+                  )}
+                </Box>
+            </Box>
+      <Box>
       <BlurImage
+        mr={4}
         alt="random unsplash image"
-        borderRadius={8}
         height="auto"
+        width={2/3}
         blur={blur}
         src="https://source.unsplash.com/random/1280x720"
       />
-      <Box>
-        {ethanced === 0 && (
-          <Button.Outline onClick={submitTip}>
-            Enhance it for $.01
-          </Button.Outline>
-        )}
-        {ethanced === 1 && (
-          <Button.Outline onClick={submitTip}>
-            Fully enhance it for another $.01
-          </Button.Outline>
-        )}
       </Box>
-      <Box bg="#333" maxWidth="500px">
-        <Text color="white" textAlign="left">
-          npm install ethanceit
-        </Text>
-        <Text color="white" textAlign="left">{`<Ethanceit`}</Text>
-        <Text
-          color="white"
-          textAlign="left"
-        >{`  address="0x0000..." // address to receive the tip`}</Text>
-        <Text
-          color="white"
-          textAlign="left"
-        >{`  src="https://source.unsplash.com/random/1280x720" // image source`}</Text>
-        <Text
-          color="white"
-          textAlign="left"
-        >{`  tipAmount="100000000000000" // Gwei \n /> `}</Text>
-      </Box>
+      </Flex>
     </Box>
   );
 }
