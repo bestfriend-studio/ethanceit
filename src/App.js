@@ -110,7 +110,12 @@ function App() {
             </Text>
           </Card>
         </Box>
-        <Box padding={[0, "100px"]} mt={[4, 0]} width={[1, 1 / 3]} mb={[4, 0]}>
+        <Box
+          padding={[0, "100px"]}
+          mt={[4, 0]}
+          width={[1, 1, 1 / 3]}
+          mb={[4, 0]}
+        >
           <Ethanceit
             address="0x9Faf8f3EE20B71c5b4Da30F69D1aFbfaF4196382"
             src="https://source.unsplash.com/random/1280x720"
