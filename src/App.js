@@ -18,11 +18,16 @@ function App() {
       >
         ethance.it
       </Heading>
-      <Flex flexDirection="row" alignItems="center">
+      <Flex
+        flexDirection={["column", "row"]}
+        alignItems="center"
+        flexWrap="wrap"
+        width={1}
+      >
         <Box
           border={1}
           borderColor="black"
-          width="auto"
+          width={[1, "auto"]}
           borderWidth={3}
           mr={4}
           ml={4}
@@ -100,7 +105,7 @@ function App() {
             </Text>
           </Card>
         </Box>
-        <Box padding="100px">
+        <Box padding={[4, "100px"]} width={[1, 1 / 3]}>
           <Ethanceit
             address="0x9Faf8f3EE20B71c5b4Da30F69D1aFbfaF4196382"
             src="https://source.unsplash.com/random/1280x720"
