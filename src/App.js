@@ -2,22 +2,42 @@ import React, { useState } from "react";
 import { Flex, Button, Slider, Image, Box, Text, Heading } from "rimble-ui";
 import styled from "styled-components";
 import "./App.css";
+import Web3 from "web3";
+import WalletConnectProvider from "@walletconnect/web3-provider";
+
+const provider = new WalletConnectProvider({
+  infuraId: "26c828d9b75641dbabb8177a744280c4" // Required
+});
+
+const web3 = new Web3(provider);
 
 const BlurImage = styled(Image)`
   filter: blur(${props => props.blur}px);
 `;
 
 function App() {
-  const [amount, setAmount] = useState(0.01);
-  const [blur, setBlur] = useState(100);
+  const [blur, setBlur] = useState(7);
+  const [ethanced, setEthanced] = useState(0);
 
-  const handleSlider = e => {
-    setAmount(e.target.value);
-  };
+  const submitTip = async () => {
+    await provider.enable();
 
-  const submitTip = () => {
-    setBlur(100 - amount * 10);
-    // setBlur(1);
+    const accounts = await web3.eth.getAccounts();
+    console.log("accounts", accounts);
+
+    const tx = {
+      from: accounts[0],
+      to: "0x9Faf8f3EE20B71c5b4Da30F69D1aFbfaF4196382",
+      value: "100000000000000"
+    };
+
+    console.log("tx", tx);
+
+    const txHash = await web3.eth.sendTransaction(tx);
+    console.log("txHash", txHash);
+
+    ethanced === 0 ? setBlur(3) : setBlur(0);
+    setEthanced(ethanced + 1);
   };
 
   return (
@@ -31,23 +51,34 @@ function App() {
         src="https://source.unsplash.com/random/1280x720"
       />
       <Box>
-        <Flex alignItems={"center"} p={3} bg={"white"}>
-          <Text color={"primary"} mr={2}>
-            $.01
-          </Text>
-          <Slider
-            min={".01"}
-            max={"10"}
-            step={".01"}
-            value={amount}
-            onChange={handleSlider}
-          />
-          <Text color={"primary"} ml={2}>
-            $10
-          </Text>
-        </Flex>
-
-        <Button.Outline onClick={submitTip}>tip ${amount}</Button.Outline>
+        {ethanced === 0 && (
+          <Button.Outline onClick={submitTip}>
+            Enhance it for $.01
+          </Button.Outline>
+        )}
+        {ethanced === 1 && (
+          <Button.Outline onClick={submitTip}>
+            Fully enhance it for another $.01
+          </Button.Outline>
+        )}
+      </Box>
+      <Box bg="#333" maxWidth="500px">
+        <Text color="white" textAlign="left">
+          npm install ethanceit
+        </Text>
+        <Text color="white" textAlign="left">{`<Ethanceit`}</Text>
+        <Text
+          color="white"
+          textAlign="left"
+        >{`  address="0x0000..." // address to receive the tip`}</Text>
+        <Text
+          color="white"
+          textAlign="left"
+        >{`  src="https://source.unsplash.com/random/1280x720" // image source`}</Text>
+        <Text
+          color="white"
+          textAlign="left"
+        >{`  tipAmount="100000000000000" // Gwei \n /> `}</Text>
       </Box>
     </Box>
   );
